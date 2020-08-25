@@ -21,7 +21,7 @@ h1 {
   font-family: 'Poppins', sans-serif;
   list-style: none;
   text-decoration: none;
-  color: white;
+ /*  color: white; */
 }
 
 /*Elementos del header*/
@@ -68,11 +68,12 @@ h1 {
   /*Cada link dentro en cada li, para modificar el texto */
   
   nav ul li a {
-    color: #f2f2f2;
+    
     font-weight: 500;
     font-size: 20px;
     padding: 7px 13px;
     border-radius: 3px;
+    color: white;
   }
   
   /*El boton de register tiene un color distinto para sobresalir*/

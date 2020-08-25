@@ -21,12 +21,16 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+// instalar para usar el PUT , mas abajo se la utiliza con el use 
+var methodOverride = require('method-override')
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/login');
 var registerRouter = require('./routes/register');
 var carritoRouter = require('./routes/carrito');
 var crearProducto = require('./routes/crearProducto');
+
 
 
 
@@ -44,6 +48,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// agregar esta linea para el uso del PUT
+app.use(methodOverride("_method"));
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/login', loginRouter);
@@ -52,8 +59,13 @@ app.use('/carrito', carritoRouter);
 app.use('/crearProducto', crearProducto);
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+// 
+/* app.use(function(req, res, next) {
   next(createError(404));
+}); */
+
+app.use(function(req, res, next) {
+  res.status(404).render('not-found');
 });
 
 // error handler

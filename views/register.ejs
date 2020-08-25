@@ -33,41 +33,54 @@
     <div class="limiter">
         <div class="container-login100">
             <div class="wrap-login100 p-t-50 p-b-90">
-                <form class="login100-form validate-form flex-sb flex-w">
+
+
+
+                <form class="login100-form validate-form flex-sb flex-w" action="/users/register" method="POST">
                     <!--Titulo de registrarse-->
                     <span class="login100-form-title palabraLogin">
                         Registrarse
                     </span>
 
                     <!--Input del nombre completo-->
-                    <div class="wrap-input100 validate-input div-del-input" data-validate="Username is required">
+                    <!-- <div class="wrap-input100 validate-input div-del-input" data-validate="Username is required">
                         <input class="input100" type="text" name="username" required placeholder="Nombre Completo">
+                        <span class="focus-input100"></span>
+                    </div> -->
+
+                    <div class="wrap-input100 validate-input div-del-input" data-validate="Password is required">
+                        <input class="input100" required name="nombre" placeholder="Nombre completo" type="text">
                         <span class="focus-input100"></span>
                     </div>
 
                     <!--Input del correo-->
-                    <div class="wrap-input100 validate-input div-del-input" data-validate="Username is required">
+                    <!-- <div class="wrap-input100 validate-input div-del-input" data-validate="Username is required">
                         <input class="input100" type="text" name="username" required placeholder="Correo electronico">
+                        <span class="focus-input100"></span>
+                    </div> -->
+
+                    <div class="wrap-input100 validate-input div-del-input" data-validate="Password is required">
+                        <input type="email" class="input100"  required name="email" placeholder="Correo electronico">
                         <span class="focus-input100"></span>
                     </div>
 
                     <!--Input de la contraseña -->
                     <div class="wrap-input100 validate-input div-del-input" data-validate="Password is required">
-                        <input class="input100" type="password" name="pass" required placeholder="Contraseña">
+                        <input type="password" class="input100" type="password" name="password" required placeholder="Contraseña">
                         <span class="focus-input100"></span>
                     </div>
 
                     <!--Input de la confirmacion de contraseña-->
                     <div class="wrap-input100 validate-input div-del-input" data-validate="Password is required">
-                        <input class="input100" type="password" name="pass" required placeholder="Confirmar contraseña">
+                        <input type="password" class="input100" type="password" name="password" required placeholder="Confirmar contraseña">
                         <span class="focus-input100"></span>
                     </div>
 
                     <!--Boton de registrase -->
                     <div class="container-login100-form-btn m-t-17">
-                        <button class="login100-form-btn">
+                        <input type="submit" value="registrarse" class="login100-form-btn">
                             Registrarse
-                        </button>
+                    </input>
                     </div>
 
                     <!--Boton de registrarse con Google -->
@@ -79,6 +92,9 @@
                     </div>
 
                 </form>
+
+
+
             </div>
         </div>
     </div>

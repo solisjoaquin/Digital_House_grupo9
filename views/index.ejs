@@ -1,72 +1,231 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style_eric.css' />
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+<head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
-  <body>
-    <%- include('partials/header.ejs') %>
-    <!-- <h1><%= title %></h1>
+
+  <style>
+    .imgheader {
+      width: 100%;
+    }
+
+    .grid {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      flex-wrap: wrap;
+
+
+    }
+
+    .grid > div {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+      width: 250px;
+      margin: 1rem;
+      height: min-content;
+
+    }
+
+    .card img {
+      width: 50px;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .container {
+      padding: 2px 16px;
+      color: black;
+    }
+
+    .card__btn {
+      display: block;
+      width: 100%;
+
+
+      font-size: 1rem;
+      padding: 5px;
+      margin: 5px;
+      text-align: center;
+      color: white;
+      background-color: orangered;
+      border: none;
+      border-radius: .4rem;
+      transition: 0.2s;
+      cursor: pointer;
+    }
+
+    .card__btn span {
+      /*margin-left: 1rem; */
+      transition: 0.2s;
+    }
+
+    .card__btn:hover,
+    .card__btn:active {
+      background-color: black;
+    }
+
+    .card__btn:hover span,
+    .card__btn:active span {
+      margin-left: 1rem;
+    }
+
+    h4 b, div p {
+      color: black;
+    }
+
+    div button span {
+  padding-right: 7px;
+  color: white;
+}
+  </style>
+</head>
+
+<body>
+  <%- include('partials/header.ejs') %>
+  <!-- <h1><%= title %></h1>
     <p>Welcome tooo <%= title %></p> -->
 
   <img class="imgheader" src="/images/prueba2.jpg" alt=""><br>
   <br>
-  <div class="primera-division-imagenes">
+
+  <div class="grid">
+    <div class="card">
+      <img src="/images/auri2.JPG" alt="Avatar" style="width:100%">
+      <div class="container">
+        <h4><b>Auriculares</b></h4>
+        <p>$ 1500.00</p>
+        <button class="card__btn">Explore <span>→</span></button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/images/auri2.JPG" alt="Avatar" style="width:100%">
+      <div class="container">
+        <h4><b>Auriculares</b></h4>
+        <p>$ 1500.00</p>
+        <button class="card__btn">Explore <span>→</span></button>
+      </div>
+    </div>
+
+    <div class="card">
+      
+      <img src="/images/auri2.JPG" alt="Avatar" style="width:100%">
+      <div class="container">
+        <h4><b >Auriculares</b></h4>
+        <p >$ 1500.00</p>
+        <button class="card__btn">Explore <span>→</span></button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/images/auri2.JPG" alt="Avatar" style="width:100% ">
+      <div class="container">
+        <h4><b>Auriculares</b></h4>
+        <p>$ 1500.00</p>
+        <button class="card__btn">Explore <span>→</span></button>
+      </div>
+    </div>
+
+
+    <div class="card">
+      <img src="/images/auri2.JPG" alt="Avatar" style="width:100%">
+      <div class="container">
+        <h4><b>Auriculares</b></h4>
+        <p>$ 1500.00</p>
+        <button class="card__btn">Explore <span>→</span></button>
+      </div>
+    </div>
+
+
+    <div class="card">
+      <img src="/images/auri2.JPG" alt="Avatar" style="width:100%">
+      <div class="container">
+        <h4><b>Auriculares</b></h4>
+        <p>$ 1500.00</p>
+        <button class="card__btn">Explore <span>→</span></button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/images/auri2.JPG" alt="Avatar" style="width:100%">
+      <div class="container">
+        <h4><b>Auriculares</b></h4>
+        <p>$ 1500.00</p>
+        <button class="card__btn">Explore <span>→</span></button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/images/auri2.JPG" alt="Avatar" style="width:100%">
+      <div class="container">
+        <h4><b>Auriculares</b></h4>
+        <p>$ 1500.00</p>
+        <button class="card__btn">Explore <span>→</span></button>
+      </div>
+    </div>
+  </div>
+
+  <!--   <div class="primera-division-imagenes">
 
     <div class="imgmain"><img style="width: 200px; height: 300px; border-style:outset;" src="/images/auri1.JPG" alt="">
       <h1 style="color:whitesmoke; font-size: medium;">Auricular Arturito</h1>
-          <button class="buttondetails"><a href="productos/producto1.html">Mas Detalles</a></button>
-</div>
-<div class="imgmain"><img style="width: 200px; height: 300px;" src="/images/auri2.JPG" alt="">
+      <button class="buttondetails"><a href="productos/producto1.html">Mas Detalles</a></button>
+    </div>
+    <div class="imgmain"><img style="width: 200px; height: 300px;" src="/images/auri2.JPG" alt="">
       <h1 style="color: whitesmoke; font-size: medium;">Auricular Star</h1>
-         <button class="buttondetails"><a href="productos/producto2.html">Mas Detalles</a></button>
-</div>
-<div class="imgmain"><img style="width: 200px; height: 300px;" src="/images/auri3.JPG" alt="">
-     <h1 style="color:whitesmoke; font-size: medium;">Auricular Darth</h1>
-         <button class="buttondetails"><a href="productos/producto3.html">Mas Detalles</a></button>
-</div>
-<div class="imgmain"><img style="width: 200px; height: 300px;" src="/images/auri4.JPG" alt="">
-     <h1 style="color:whitesmoke; font-size: medium;">Auricular Storm</h1>
-         <button class="buttondetails"><a href="productos/producto4.html">Mas Detalles</a></button>
-</div>
-<div class="imgmain"><img style="width: 200px; height: 300px;" src="/images/artur_ppen_usb.jpg" alt="">
+      <button class="buttondetails"><a href="productos/producto2.html">Mas Detalles</a></button>
+    </div>
+    <div class="imgmain"><img style="width: 200px; height: 300px;" src="/images/auri3.JPG" alt="">
+      <h1 style="color:whitesmoke; font-size: medium;">Auricular Darth</h1>
+      <button class="buttondetails"><a href="productos/producto3.html">Mas Detalles</a></button>
+    </div>
+    <div class="imgmain"><img style="width: 200px; height: 300px;" src="/images/auri4.JPG" alt="">
+      <h1 style="color:whitesmoke; font-size: medium;">Auricular Storm</h1>
+      <button class="buttondetails"><a href="productos/producto4.html">Mas Detalles</a></button>
+    </div>
+    <div class="imgmain"><img style="width: 200px; height: 300px;" src="/images/artur_ppen_usb.jpg" alt="">
       <h1 style="color:whitesmoke; font-size: medium;">Pendrive Arturito</h1>
-         <button class="buttondetails"><a href="productos/producto5.html">Mas Detalles</a></button>
-</div>
-  <div class="imgmain"><img style="width: 200px; height: 300px;" src="/images/darth_pen_usb.jpg" alt="">
-       <h1 style="color:whitesmoke; font-size: medium;">Pendrive Darth Vader</h1>
-           <button class="buttondetails"><a href="productos/producto6.html">Mas Detalles</a></button>
-  </div>
-  <div class="imgmain"><img style="width: 200px; height: 300px;" src="/images/darthmaul_pen_usb.jpg" alt="">
-        <h1 style="color:whitesmoke; font-size: medium;">Pendrive Darth Maul</h1>
-           <button class="buttondetails"><a href="productos/producto7.html">Mas Detalles</a></button>
-  </div>
-  <div class="imgmain"><img style="width: 200px; height: 300px;" src="/images/yoda_pen_usb.jpg" alt="">
-    <h1 style="color:whitesmoke; font-size: medium;">Pendrive Yoda</h1>
-    <button class="buttondetails"><a href="productos/producto8.html">Mas Detalles</a></button>
-  </div>
-  <div class="imgmain"><img style="width: 200px; height: 300px;" src="/images/alfombrilla.jpg" alt="">
-    <h1 style="color:whitesmoke; font-size: medium;">Alfombrilla Darth</h1>
-    <button class="buttondetails"><a href="productos/producto9.html">Mas Detalles</a></button>
-  </div>
-  <div class="imgmain"><img style="width: 200px; height: 300px;" src="/images/alfombrilla_2.jpg" alt="">
-    <h1 style="color:whitesmoke; font-size: medium;">Alfombrilla Arturito</h1>
-    <button class="buttondetails"><a href="productos/producto10.html">Mas Detalles</a></button>
-  </div>
-  <div class="imgmain"><img style="width: 200px; height: 300px;" src="/images/alfombrilla_storm.jpg" alt="">
-    <h1 style="color:whitesmoke; font-size: medium;">Alfombrilla Storm</h1>
-    <button class="buttondetails"><a href="productos/producto11.html">Mas Detalles</a></button>
-  </div>
-  <div class="imgmain"><img style="width: 200px; height: 300px;" src="/images/mouse.jpg" alt="">
-    <h1 style="color:whitesmoke; font-size: medium;">Mouse Darth Vader</h1>
-    <button class="buttondetails"><a href="productos/producto12.html">Mas Detalles</a></button>
-  </div>
+      <button class="buttondetails"><a href="productos/producto5.html">Mas Detalles</a></button>
+    </div>
+    <div class="imgmain"><img style="width: 200px; height: 300px;" src="/images/darth_pen_usb.jpg" alt="">
+      <h1 style="color:whitesmoke; font-size: medium;">Pendrive Darth Vader</h1>
+      <button class="buttondetails"><a href="productos/producto6.html">Mas Detalles</a></button>
+    </div>
+    <div class="imgmain"><img style="width: 200px; height: 300px;" src="/images/darthmaul_pen_usb.jpg" alt="">
+      <h1 style="color:whitesmoke; font-size: medium;">Pendrive Darth Maul</h1>
+      <button class="buttondetails"><a href="productos/producto7.html">Mas Detalles</a></button>
+    </div>
+    <div class="imgmain"><img style="width: 200px; height: 300px;" src="/images/yoda_pen_usb.jpg" alt="">
+      <h1 style="color:whitesmoke; font-size: medium;">Pendrive Yoda</h1>
+      <button class="buttondetails"><a href="productos/producto8.html">Mas Detalles</a></button>
+    </div>
+    <div class="imgmain"><img style="width: 200px; height: 300px;" src="/images/alfombrilla.jpg" alt="">
+      <h1 style="color:whitesmoke; font-size: medium;">Alfombrilla Darth</h1>
+      <button class="buttondetails"><a href="productos/producto9.html">Mas Detalles</a></button>
+    </div>
+    <div class="imgmain"><img style="width: 200px; height: 300px;" src="/images/alfombrilla_2.jpg" alt="">
+      <h1 style="color:whitesmoke; font-size: medium;">Alfombrilla Arturito</h1>
+      <button class="buttondetails"><a href="productos/producto10.html">Mas Detalles</a></button>
+    </div>
+    <div class="imgmain"><img style="width: 200px; height: 300px;" src="/images/alfombrilla_storm.jpg" alt="">
+      <h1 style="color:whitesmoke; font-size: medium;">Alfombrilla Storm</h1>
+      <button class="buttondetails"><a href="productos/producto11.html">Mas Detalles</a></button>
+    </div>
+    <div class="imgmain"><img style="width: 200px; height: 300px;" src="/images/mouse.jpg" alt="">
+      <h1 style="color:whitesmoke; font-size: medium;">Mouse Darth Vader</h1>
+      <button class="buttondetails"><a href="productos/producto12.html">Mas Detalles</a></button>
+    </div>
 
-      
-  </div>
-    <%- include('partials/footer.ejs') %>
-  </body>
+
+  </div> -->
+  <%- include('partials/footer.ejs') %>
+</body>
+
 </html>

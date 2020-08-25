@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <%- include('partials/header.ejs') %>
+
+    <!--Register-->
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100 p-t-50 p-b-90">
+
+
+                <!-- Poner el PUT En el Action para que envie el cambio-->
+
+                <form class="login100-form validate-form flex-sb flex-w" action="/users/edit?_method=PUT" method="POST">
+                    <!--Titulo de registrarse-->
+                    <span class="login100-form-title palabraLogin">
+                        Editar
+                    </span>
+
+
+                    <div class="wrap-input100 validate-input div-del-input" data-validate="Password is required">
+                        <input class="input100" required name="nombre" type="text" value="<%= userToEdit.name %>">
+                        <span class="focus-input100"></span>
+                    </div>
+
+
+                    
+
+                    <!--Boton de registrase -->
+                    <div class="container-login100-form-btn m-t-17">
+                        <input type="submit" value="registrarse" class="login100-form-btn">
+                            Editar
+                    </input>
+                    </div>
+
+                </form>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <%- include('partials/footer.ejs') %>
+</body>
+</html>

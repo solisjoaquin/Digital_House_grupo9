@@ -3,17 +3,14 @@
         <%- include('partials/header.ejs') %>
         <ul>
             
-            <% for(let i=0; i < users.length ; i++){%>
+            <% for(let i=0; i < userResults.length ; i++){%>
                 <li>
+                    
 
                     <!--sin el queryString-->
-                    <a href="/users/detail/<%= users[i].id %>"><%= users[i].name %></a>
-
-                    <form method="POST" action="/users/delete/<%= users[i].id%>?_method=DELETE ">
-                        <button type="submit">Borrar</button>
-                    </form>
+                    <a href="/users/detail/<%= userResults[i].id %>"><%= userResults[i].name %></a>
                     
-                </li>
+                </li>                                  
             <% } %>
         </ul>
         <h2>Search</h2>
