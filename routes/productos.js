@@ -14,8 +14,6 @@ var storage = multer.diskStorage({
 });
 
 var upload = multer({storage: storage});
-//var multerConfig = require("../utils/multerConfig");
-//const upload = multer(multerConfig);
 
 router.get('/', controller.index);
 

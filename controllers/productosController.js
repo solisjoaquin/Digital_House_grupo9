@@ -82,7 +82,7 @@ let productosController = {
         } */
 
         // leer el archivo JSON y parsearlo a objeto literal
-        let archivoProductos = fs.readFileSync('productos.json', {encoding: 'utf-8'});
+        let archivoProductos = fs.readFileSync('./data/productos.json', {encoding: 'utf-8'});
         productos = JSON.parse(archivoProductos);
 
         //reemplazo con los nuevos elementos
