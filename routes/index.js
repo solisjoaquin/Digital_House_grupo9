@@ -1,14 +1,8 @@
 var express = require('express');
 var router = express.Router();
-
-var userController = require('../controllers/productosController.js')
-
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Chubacha' });
-
-});
+var controller = require('../controllers/indexController.js')
 
 
+router.get('/', controller.index);
 
 module.exports = router;

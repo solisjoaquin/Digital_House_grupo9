@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
+    <%- include('partials/head.ejs') %>
   <body>
     <%- include('partials/header.ejs') %>
     
@@ -24,13 +18,17 @@
                     <th>Cantidad</th>
                     <th>Total</th>
                 </tr>
+                <!--Solo mostrara el listado del carrito pero con paso de a 2-->
+                <% for ( let i = 0; i < productos.length; i= i+2 ){ %>
                 <tr>
-                    <td class="teclado">Teclado</td>
-                    <td>$360.00</td>
+                    <td class="teclado"><%= productos[i].nombre %></td>
+                    <td>$<%= productos[i].precio%></td>
                     <td><input placeholder="0" type="text" size="3"></td>
                     <td>$720.00</td>
                 </tr>
-                <tr>
+
+                <% } %>
+                <!-- <tr>
                     <td class="mouse">Mouse</td>
                     <td>$360.00</td>
                     <td><input placeholder="0" type="text" size="3"></td>
@@ -41,7 +39,7 @@
                     <td>$360.00</td>
                     <td><input placeholder="0" type="text" size="3"></td>
                     <td>$720.00</td>
-                </tr>
+                </tr> -->
             </table>
 
             <div class="descuento">
@@ -79,8 +77,8 @@
 
             <div class="botones_de_compra">
                 <h1>Total: $5000.00</h1>
-                <button class="botones_de_compra">Seguir comprando</button>
-                <button class="botones_de_compra">Pagar</button>
+                <a><button class="botones_de_compra"><a href="">Seguir comprando</a></button></a>
+                <button class="botones_de_compra"><a href="">Pagar</a></button>
 
             </div>
         </div>

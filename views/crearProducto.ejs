@@ -1,98 +1,52 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
-  <body>
+<%- include('partials/head.ejs') %>
+
+<body>
     <%- include('partials/header.ejs') %>
-    
+
     <div class="limiter">
+    <form method="POST" action="/productos/crearproducto" enctype="multipart/form-data">
         <div class="container-login100">
-            <div class="product_div">
-                <p>Nombre del producto</p>
-                <input class="input100" type="text"  name="pass" >
-                <span class="focus-input100"></span>
-
-                <p>Descripcion</p>
-                <input class="input100" type="text"  name="pass" >
-                <span class="focus-input100"></span>
-
-                <p>Precio</p>
-                <input class="input100" type="text"  name="pass" placeholder="0000.00">
-                <span class="focus-input100"></span>
-
-                <p>Categoria</p>
-                <select name="productos" id="productos">
-                    <option value="volvo">Teclados</option>
-                    <option value="saab">Mouse</option>
-                    <option value="mercedes">Auriculares</option>
-                    <option value="audi">Monitores</option>
-                  </select>
-            </div>
-            <div>
-                <input  class="input100" type="file" id="img" name="img" accept="image/*">
-
-                        <span class="focus-input100"></span>
-
-
-                        <div class="button_carrito">
-                            
-                            <button class="login100-form-btn">
-                                Borrar
-                            </button>
-                            <input type="submit" value="publicar" class="login100-form-btn">
-
-                        
-                        </div>
-            </div>
             
+                <div class="product_div">
 
+                    <p>Nombre del producto</p>
+                    <input class="input100" type="text" name="nombre">
+                    <span class="focus-input100"></span>
 
+                    <p>Descripcion</p>
+                    <input class="input100" type="text" name="descripcion">
+                    <span class="focus-input100"></span>
 
-            <!-- <div class="wrap-login100 p-t-50 p-b-90">
-                <form class="login100-form validate-form flex-sb flex-w">
-                    <span class="login100-form-title palabraLogin">
-                        Login
-                    </span> -->
+                    <p>Precio</p>
+                    <input class="input100" type="text" name="precio" placeholder="0000.00">
+                    <span class="focus-input100"></span>
 
-                    <!--Input para el correo-->
-                    <!-- <div class="wrap-input100 validate-input div-del-input" data-validate="Username is required">
-                        <input class="input100" type="text" required name="username" placeholder="Correo electronico">
-                        <span class="focus-input100"></span>
-                    </div> -->
+                    <p>Categoria</p>
+                    <select name="tipoProductos" id="productos">
+                        <option value="Teclados">Teclados</option>
+                        <option value="Mouse">Mouse</option>
+                        <option value="Auriculares">Auriculares</option>
+                        <option value="Monitores">Monitores</option>
+                    </select>
+                </div>
+                <div>
+                    <input class="input100" type="file" id="img" name="img" accept="image/*">
+                    <span class="focus-input100"></span>
 
-                    <!-- input para la contraseña-->
-                    <!-- <div class="wrap-input100 validate-input div-del-input" data-validate="Password is required">
-                        <input class="input100" type="password" required name="pass" placeholder="Contraseña">
-                        <span class="focus-input100"></span>
-                    </div> -->
+                    <div class="button_carrito">
+                        <input class="login100-form-btn" type="reset" value="reset">
+                        <input type="submit" value="publicar" class="login100-form-btn">
+                    </div>
 
-                    <!--boton de Login-->
-                    <!-- <div class="container-login100-form-btn m-t-17">
-                        <button class="login100-form-btn">
-                            Login
-                        </button>
-                    </div> -->
-
-                    <!--boton de login con google-->
-                    <!-- <div class="container-login100-form-btn m-t-17 google-div">
-                        <button class="login100-form-btn google-btn">
-                            <span class="fab fa-google"></span> Ingresar con Google
-                        </button> -->
-<!--                     </div>
-
-                </form>
-            </div> -->
+                </div>
+            
         </div>
+    </form>
     </div>
 
-
-
-
     <%- include('partials/footer.ejs') %>
-  </body>
+</body>
+
 </html>

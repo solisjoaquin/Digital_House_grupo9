@@ -1,31 +1,9 @@
-<!-- <html>
-    <head>
-        <link rel="stylesheet" href="/css/estilos.css">
-    </head>
-    <body>
-        <h1>Register</h1>
-        <form action="POST" action="/users/register">
-            <label for="name">Nombre</label>
-            <input type="text" name="name">
-            <p>Hobbies</p>
-            <% for(let i =0; i < 10; i++) { %>
-                <label for="">Hobbie <%= i %></label>
-                <input type='text' name="hobbies">
-            <% } %>
-
-        </form>
-    </body>
-</html> -->
-
+<!--formulario para registrar un usuario-->
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
+    <%- include('partials/head.ejs') %>
+</head>
   <body>
     <%- include('partials/header.ejs') %>
 
@@ -42,22 +20,16 @@
                         Registrarse
                     </span>
 
-                    <!--Input del nombre completo-->
-                    <!-- <div class="wrap-input100 validate-input div-del-input" data-validate="Username is required">
-                        <input class="input100" type="text" name="username" required placeholder="Nombre Completo">
-                        <span class="focus-input100"></span>
-                    </div> -->
-
                     <div class="wrap-input100 validate-input div-del-input" data-validate="Password is required">
-                        <input class="input100" required name="nombre" placeholder="Nombre completo" type="text">
+                        <input class="input100" required name="name" placeholder="Nombre" type="text">
                         <span class="focus-input100"></span>
                     </div>
 
-                    <!--Input del correo-->
-                    <!-- <div class="wrap-input100 validate-input div-del-input" data-validate="Username is required">
-                        <input class="input100" type="text" name="username" required placeholder="Correo electronico">
+                    <div class="wrap-input100 validate-input div-del-input" data-validate="Password is required">
+                        <input class="input100" required name="name" placeholder="Apellido" type="text">
                         <span class="focus-input100"></span>
-                    </div> -->
+                    </div>
+
 
                     <div class="wrap-input100 validate-input div-del-input" data-validate="Password is required">
                         <input type="email" class="input100"  required name="email" placeholder="Correo electronico">
@@ -79,7 +51,6 @@
                     <!--Boton de registrase -->
                     <div class="container-login100-form-btn m-t-17">
                         <input type="submit" value="registrarse" class="login100-form-btn">
-                            Registrarse
                     </input>
                     </div>
 
