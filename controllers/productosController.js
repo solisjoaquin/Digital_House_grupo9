@@ -33,7 +33,7 @@ let productosController = {
         
         let productosJSON = fs.readFileSync('productos.json', {encoding:'utf-8'})
         let productos = JSON.parse(productosJSON)
-        let productoAEditar = productos[idProducto]
+        let productoAEditar = productos[idProducto-1]
 
         res.render("editarproducto", {productoAEditar:productoAEditar, idProducto:idProducto})
         //res.send(idProducto)
@@ -87,7 +87,7 @@ let productosController = {
 
         //reemplazo con los nuevos elementos
         for (let i=0; i<productos.length; i++){
-            if (productos[i] == idProducto){
+            if (productos[i].id == (idProducto)){
                 productos[i].nombre = req.body.nombre,
                 productos[i].descripcion = req.body.descripcion,
                 productos[i].precio = req.body.precio,
@@ -99,7 +99,7 @@ let productosController = {
         fs.writeFileSync('productos.json', productosJSON)
 
         //res.render('producto',{producto: producto})
-        res.send(productos[idProducto])
+        res.redirect('/')
         //res.send(req.body)
         /* let putVar = req.body
         res.send(putVar) */
